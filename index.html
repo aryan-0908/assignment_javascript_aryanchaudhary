@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Filter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Product Catalog</h1>
+      <p class="subtitle">Discover our amazing collection</p>
+    </div>
+  </header>
+  
+  <div class="container">
+    <div class="filter-toggle" id="filter-toggle">
+      <span>Filters</span>
+      <span class="toggle-icon">▼</span>
+    </div>
+    
+    <div class="product-container">
+      <!-- Filters sidebar -->
+      <div class="filters" id="filters-panel">
+        <div class="filter-header">
+          <h2>Filter Products</h2>
+          <button id="clear-filters" class="clear-btn">Clear All</button>
+        </div>
+        
+        <div class="filter-section">
+          <h3>Categories</h3>
+          <div class="category-filters" id="category-filters">
+            <!-- Categories will be added dynamically -->
+          </div>
+        </div>
+        
+        <div class="filter-section">
+          <h3>Price Range</h3>
+          <div class="price-slider">
+            <div class="slider-container">
+              <input type="range" id="price-min" min="0" max="300" value="0" class="slider">
+              <input type="range" id="price-max" min="0" max="300" value="300" class="slider">
+              <div class="slider-track" id="slider-track"></div>
+            </div>
+            <div class="price-values">
+              <span id="price-min-value">Rs.0</span>
+              <span id="price-max-value">Rs.20,000</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="active-filters" id="active-filters">
+          <h3>Active Filters</h3>
+          <div class="filter-tags" id="filter-tags">
+            <!-- Active filters will be shown here -->
+          </div>
+        </div>
+      </div>
+      
+      <!-- Products grid -->
+      <div class="products-wrapper">
+        <div class="products-header">
+          <div class="product-count" id="product-count">8 products</div>
+          <div class="sort-options">
+            <label for="sort-select">Sort by:</label>
+            <select id="sort-select" class="sort-select">
+              <option value="default">Featured</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="name">Name</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="products" id="products-container">
+          <!-- Products will be added dynamically -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    <div class="container">
+      <p>© 2025 Product Catalog. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
